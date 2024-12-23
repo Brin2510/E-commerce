@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>MyTaylorUnit By Sahiba - Online Shopping</title>
+    
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/home.css" />
+    
+    <style>
+      
+      .header {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  background-color: white;
+  /* border: 1px solid red; */
+}
+
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  /* -webkit-box-shadow: 0 8px 6px -6px #eee;
+              -moz-box-shadow: 0 8px 6px -6px #eee; */
+  box-shadow: 0 8px 6px -6px #eee;
+
+  /* box-shadow: 0px 8px 8px -6px rgba(0, 0, 0, 0.5); */
+}
+.header div ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+.categories {
+  margin-left: 50px;
+  /* display: block; */
+  /* float: left; */
+  width: 33%;
+  /* border: 1px solid red; */
+  /* position: absolute; */
+}
+.dropdown-content1:hover {
+  border-bottom: 5px solid rgb(6, 47, 109);
+}
+.dropdown-content2:hover {
+  border-bottom: 5px solid rgb(238, 0, 119);
+}
+.dropdown-content3:hover {
+  border-bottom: 5px solid orangered;
+}
+.dropdown-content4:hover {
+  border-bottom: 5px solid gold;
+}
+.dropdown-content5:hover {
+  border-bottom: 5px solid peachpuff;
+}
+
+.dropdown-menu {
+  /* display: none;
+        position: absolute;
+        top: 200px; */
+  display: none;
+  position: fixed;
+  background: white;
+  top: 70px;
+
+  z-index: 20;
+  padding: 10px 30px 10px;
+  border: 1px solid #eee;
+  box-shadow: 0 8px 6px -6px #aaa;
+}
+
+.dropdown-menu1 {
+  left: 10%;
+}
+
+.dropdown-menu2 {
+  left: 14%;
+}
+
+.dropdown-menu3 {
+  left: 19.5%;
+}
+.dropdown-menu4 {
+  left: 26%;
+}
+.dropdown-menu5 {
+  left: 34%;
+}
+.dropdown-menu ul li {
+  margin-bottom: 10px;
+}
+.dropdown-menu ul li a {
+  /* margin-right: 20px; */
+  /* padding: 28px 17px 28px; */
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  color: #282c3f;
+  /* border-bottom: none; */
+  -webkit-transition: left 0.2s ease-out, width 0.2s ease-out;
+  transition: left 0.2s ease-out, width 0.2s ease-out;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu ul li:hover a {
+  padding-left: 8px;
+  /* padding-right: -8px; */
+  color: #ff0095;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+}
+
+.header div ul li a {
+  /* margin-right: 20px; */
+  padding: 28px 17px 28px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  color: #282c3f;
+  /* border-bottom: none; */
+  -webkit-transition: left 0.2s ease-out, width 0.2s ease-out;
+  transition: left 0.2s ease-out, width 0.2s ease-out;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.header div ul:hover {
+  border-bottom: #282c3f;
+  /* background-color: red; */
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Verdana, sans-serif;
+  /* background-color: rgb(248, 248, 248); */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.mySlides {
+  display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: 130px auto 0;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+.header div img {
+  width: 51px;
+  margin-left: 60px;
+}
+
+.search-div {
+  display: flex;
+  width: 39%;
+  background-color: #eee;
+  height: 40px;
+  align-items: center;
+  justify-content: flex-start;
+  /* margin-left: 7%; */
+  border-radius: 3px;
+}
+
+#searchpng {
+  /* height: 10px; */
+  /* vertical-align: middle; */
+  width: 15px;
+  /* border: 1px solid red; */
+  margin: 15px;
+  opacity: 0.5;
+}
+.search-div input {
+  width: 70%;
+  border: none;
+  margin-left: 2%;
+  background-color: #eee;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.nav-last {
+  padding: 0 12px 0 17px;
+  position: relative;
+  display: flex;
+  height: 40px;
+  margin-left: 30px;
+  /* border: 1px solid red; */
+}
+.nav-last > div {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  align-items: center;
+  padding-top: 5px;
+  margin-left: 15px;
+}
+
+#svg {
+  height: 15px;
+  /* border: 1px solid red; */
+  margin-left: 0px;
+}
+
+/* h4-title */
+.text-banner-title {
+  text-transform: uppercase;
+  color: #3e4152;
+  letter-spacing: 0.15em;
+  font-size: 1.8em;
+  margin: 50px 0 10px 30px;
+  max-height: 5em;
+  font-weight: 600;
+}
+
+img {
+  display: block;
+}
+/* img link container */
+.img-link-container {
+  margin: 3.5%;
+  display: grid;
+  grid-template-columns: repeat(5, 19.5%);
+  gap: 1%;
+  row-gap: 0;
+  /* height: auto; */
+}
+
+.img-link-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.img-link-container-2 {
+  margin: 3.5%;
+  display: grid;
+  grid-template-columns: repeat(6, 15%);
+  gap: 2%;
+  row-gap: 0px;
+}
+
+.img-link-container-2 img {
+  width: 100%;
+}
+
+/* footer */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/* body {
+        line-height: 1.5;
+        font-family: "Poppins", sans-serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      } */
+.container {
+  max-width: 75%;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  /* background-color: #24262b; */
+  padding: 70px 0;
+
+  background-color: #eee;
+  /* border: 1px solid black; */
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+  /* border: 1px solid black; */
+}
+.footer-col h4 {
+  font-size: 16px;
+  /* color: #ffffff; */
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-weight: 600;
+  position: relative;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.footer-col ul li a {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #777777;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #000000;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(134, 134, 134, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #24262b;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.footer img {
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.footer-promise {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.footer-promise img {
+  width: 25%;
+  height: 25%;
+  margin-right: 15px;
+}
+
+/*responsive*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="header sticky">
+        <div>
+          <a href="home.html">
+            
+            
+            
+              
+              
+          </a>
+        </centre>
+        </div>
+        <h4>MyTaylor Unit by Sahiba</h4>
+<div class="categories">
+  <ul>
+    <li class="dropdown-content1 dropdown-content">
+      <a href="mens.html" aria-label="Explore Ethnicwear collection">Ethnicwear</a>
+    </li>
+    <li class="dropdown-content2 dropdown-content">
+      <a href="./best.html" aria-label="Browse Best Sellers">Best Sellers</a>
+    </li>
+    
+    <li class="dropdown-content4 dropdown-content">
+      <a href="#" aria-label="Discover Sarees">Sarees</a>
+    </li>
+    <li class="dropdown-content5 dropdown-content">
+      <a href="#" aria-label="Shop products under 1499">Under 1499</a>
+    </li>
+  </ul>
+</div>
+
+<style>
+  h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .categories ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+  }
+
+  .categories li {
+    margin-bottom: 10px; /* Add space between list items */
+  }
+
+  .categories a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5; /* Ensures proper spacing between lines of text */
+    display: block; /* Ensures each link occupies a new line */
+  }
+
+  .categories a:hover {
+    color: #007bff; /* Optional: Add hover color for links */
+    text-decoration: underline;
+  }
+</style>
+
+        <!-- Search Div -->
+        <div class="search-div">
+          <img
+            id="searchpng"
+            src="https://image.flaticon.com/icons/png/128/49/49116.png"
+            alt=""
+          />
+
+          <input
+            type="text"
+            placeholder="Search for products, brands and more"
+          />
+        </div>
+
+        <div class="nav-last">
+          <div>
+            <a href="./bri.html">
+              <img
+                id="svg"
+                src="https://www.svgrepo.com/show/198180/user-profile.svg"
+                alt=""
+              />
+            </a>
+
+            <div>Profile</div>
+          </div>
+
+          <div>
+           
+              <img
+                id="svg"
+                src="https://www.svgrepo.com/show/14970/heart.svg"
+                alt=""
+              />
+            </a>
+
+            <div>Wishlist</div>
+          </div>
+
+          <div>
+            <a href="./bag.html">
+              <img
+                id="svg"
+                src="https://www.svgrepo.com/show/17522/bag.svg"
+                alt=""
+              />
+            </a>
+
+            <div>Bag</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- dropdown -->
+      <div class="dropdown-menu1 dropdown-menu">
+        <ul>
+          <li><a href="products.html">Suit sets</a></li>
+          <li><a href="products.html">kurta</a></li>
+          <li><a href="products.html">sarees</a></li>
+          <li><a href="products.html">lehenga</a></li>
+          <li><a href="products.html">co-ord sets</a></li>
+        </ul>
+      </div>
+
+      
+
+      <!-- slideshow carousel -->
+
+      <div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="https://www.biba.in/on/demandware.static/-/Library-Sites-BibaSharedLibrary/en_US/dw34375e53/AW-Eoss/Explore/main-int-eoss-19dec-1.jpg" style="width: 100%; height: 500px; object-fit: cover;" />
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://www.cbazaar.com/blog/wp-content/uploads/2022/03/Wedding_Page_IPB.jpg" style="width: 100%; height: 500px; object-fit: cover;" />
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://www.samyakk.com/blog/wp-content/uploads/2023/03/MAIN-BANNER-lehenga.jpg" style="width: 100%; height: 500px; object-fit: cover;" />
+    </div>
+</div>
+
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <div class="text-banner-container">
+        
+        <h4 class="text-banner-title">NEW ARRIVALS</h4>
+        <style>
+          .text-banner-container {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 20px; /* Adds padding around the text */
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100px; /* Sets the height of the banner */
+    text-align: center; /* Centers the text */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    margin: 20px 0; /* Adds margin to the top and bottom */
+}
+
+.text-banner-title {
+    font-family: 'Arial', sans-serif; /* Font style */
+    font-size: 24px; /* Font size */
+    color: #333; /* Text color */
+    font-weight: bold; /* Makes the text bold */
+    letter-spacing: 2px; /* Adds space between letters */
+    text-transform: uppercase; /* Makes the text uppercase */
+    margin: 0; /* Removes default margin */
+}
+
+        </style>
+      
+      </div>
+
+      <style>
+        /* General Styles */
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 20px;
+          background-color: #f9f9f9;
+        }
+    
+        /* Product Grid */
+        .product-grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          justify-content: center;
+        }
+    
+        /* Product Card */
+        .product-card {
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          overflow: hidden;
+          width: 250px;
+          text-align: center;
+          position: relative;
+          background-color: #fff;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        .product-image {
+          position: relative;
+          overflow: hidden;
+        }
+    
+        .product-image img {
+          width: 100%;
+          height: auto;
+          transition: opacity 0.5s ease;
+        }
+    
+        .image-hover {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+        }
+    
+        .product-image:hover .image-hover {
+          opacity: 1;
+        }
+    
+        .product-image:hover .image-front {
+          opacity: 0;
+        }
+    
+        .like-button {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          border: none;
+          background-color: rgba(0, 0, 0, 0.5);
+          color: #fff;
+          font-size: 14px;
+          padding: 5px 10px;
+          border-radius: 4px;
+          cursor: pointer;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+    
+        .product-image:hover .like-button {
+          opacity: 1;
+        }
+    
+        /* Quick View Button */
+        .quick-view {
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          border: none;
+          background-color: rgba(0, 0, 0, 0.5);
+          color: #fff;
+          font-size: 14px;
+          padding: 5px 10px;
+          border-radius: 4px;
+          cursor: pointer;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+    
+        .product-image:hover .quick-view {
+          opacity: 1;
+        }
+    
+        /* Product Details */
+        .product-details {
+          padding: 10px;
+        }
+    
+        .product-title {
+          font-size: 16px;
+          font-weight: bold;
+          margin: 10px 0 5px;
+        }
+    
+        .product-price {
+          font-size: 14px;
+          color: #555;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="product-grid">
+        <!-- Product Card -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://assets.panashindia.com/media/catalog/product/cache/4/small_image/306x427/9df78eab33525d08d6e5fb8d27136e95/4/5/4590sl03-1013.jpg" alt="Stripe Royal Blue Suit Set" class="image-front">
+            <img src="https://assets.panashindia.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/4/5/4590sl03-1013-1.jpg" alt="Stripe Royal Blue Suit Set Hover" class="image-hover">
+            <button class="like-button">❤️</button>
+            <button class="quick-view">Quick View</button>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Stripe Royal Blue Suit Set</h3>
+            <p class="product-price">₹ 5,749.00</p>
+          </div>
+        </div>
+    
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://naachiyars.in/cdn/shop/files/N1896109-B_800x.jpg?v=1716381646" alt="Peachy Bloom Cotton Suit" class="image-front">
+            <img src="https://naachiyars.in/cdn/shop/files/N1896109-C_1000x.jpg?v=1716381647" alt="Peachy Bloom Cotton Suit Hover" class="image-hover">
+           
+            <button class="quick-view">Quick View</button>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Peachy Bloom Cotton Suit</h3>
+            <p class="product-price">₹ 6,249.00</p>
+          </div>
+        </div>
+    
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://suruchiparakh.com/cdn/shop/files/05-01-20246830.jpg?v=1707930645&width=823" alt="Mauve Mirage Co-Ord Set" class="image-front">
+            <img src="https://suruchiparakh.com/cdn/shop/files/05-01-20246872.jpg?v=1709455902&width=823" alt="Mauve Mirage Co-Ord Set Hover" class="image-hover">
+            
+            <button class="quick-view">Quick View</button>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Mauve Mirage Co-Ord Set</h3>
+            <p class="product-price">₹ 4,999.00</p>
+          </div>
+        </div>
+    
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://cygnusfashion.com/cdn/shop/products/4803-A.jpg?v=1621667256" alt="Multicolor Floral Chinoiserie" class="image-front">
+            <img src="https://cygnusfashion.com/cdn/shop/products/4803-D.jpg?v=1621667256" alt="Multicolor Floral Chinoiserie Hover" class="image-hover">
+            
+            <button class="quick-view">Quick View</button>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Multicolor Floral Chinoiserie</h3>
+            <p class="product-price">₹8,249.00</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://naachiyars.in/cdn/shop/files/N1896081-B_1000x.jpg?v=1716379728" alt="Multicolor Floral Chinoiserie" class="image-front">
+            <img src="https://naachiyars.in/cdn/shop/files/N1896081-A_1200x1800.jpg?v=1716379727" alt="Multicolor Floral Chinoiserie Hover" class="image-hover">
+            
+            <button class="quick-view">Quick View</button>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Red Cotton Printed Chudithar</h3>
+            <p class="product-price">₹ 2,249.00</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://ananthamsilks.com/cdn/shop/files/21_71166cf0-20c8-4b4b-ba1b-ced5b51b40a9_large.jpg?v=1729261980" alt="Multicolor Floral Chinoiserie" class="image-front">
+            <img src="https://ananthamsilks.com/cdn/shop/files/22_f3220934-fe64-480c-9ad1-d6b8b94f5f48.jpg" alt="Multicolor Floral Chinoiserie Hover" class="image-hover">
+            
+            <button class="quick-view">Quick View</button>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Chudithar</h3>
+            <p class="product-price">₹ 1,249.00</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://naachiyars.in/cdn/shop/files/N1896102-B_800x.jpg?v=1717749034" alt="Multicolor Floral Chinoiserie" class="image-front">
+            <img src="https://naachiyars.in/cdn/shop/files/N1896102-C_1200x1800.jpg?v=1716381287" alt="Multicolor Floral Chinoiserie Hover" class="image-hover">
+            
+            <button class="quick-view">Quick View</button>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Black Chanderi Embroidered Chudithar</h3>
+            <p class="product-price">₹ 3,249.00</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://naachiyars.in/cdn/shop/files/N1896096-B_1000x.jpg?v=1716380649" alt="Multicolor Floral Chinoiserie" class="image-front">
+            <img src="https://cygnusfashion.com/cdn/shop/products/4803-D.jpg?v=1621667256" alt="Multicolor Floral Chinoiserie Hover" class="image-hover">
+            
+            <button class="quick-view">Quick View</button>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Multicolor Floral Chinoiserie</h3>
+            <p class="product-price">₹ 8,249.00</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://cygnusfashion.com/cdn/shop/products/4803-A.jpg?v=1621667256" alt="Multicolor Floral Chinoiserie" class="image-front">
+            <img src="https://cygnusfashion.com/cdn/shop/products/4803-D.jpg?v=1621667256" alt="Multicolor Floral Chinoiserie Hover" class="image-hover">
+            
+            <button class="quick-view">Quick View</button>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Multicolor Floral Chinoiserie</h3>
+            <p class="product-price">₹ 8,249.00</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://cygnusfashion.com/cdn/shop/products/4803-A.jpg?v=1621667256" alt="Multicolor Floral Chinoiserie" class="image-front">
+            <img src="https://cygnusfashion.com/cdn/shop/products/4803-D.jpg?v=1621667256" alt="Multicolor Floral Chinoiserie Hover" class="image-hover">
+            
+            <button class="quick-view">Quick View</button>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Multicolor Floral Chinoiserie</h3>
+            <p class="product-price">₹ 8,249.00</p>
+          </div>
+        </div>
+      </div>
+    </body>
+
+      <!-- CATEGORIES TO BAG -->
+      
+      <style>
+        /* Add styling to resize the images */
+        img {
+          width: 70%; /* Adjust percentage as needed */
+          height: auto; /* Maintain aspect ratio */
+          display: block; /* Ensure images don't overlap */
+          margin: 10px auto; /* Center images with some spacing */
+        }
+      </style>
+    
+      <img src="https://ambraee.com/cdn/shop/files/jpeg-optimizer_RTS_copy.jpg?v=1732105497&width=1920" alt="Image 1">
+      <img src="https://ambraee.com/cdn/shop/files/WEDDING_CARNIVALS_copy.jpg?v=1732104476&width=1920" alt="Image 2">
+
+      <!-- Footer -->
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>online shopping</h4>
+              <ul>
+                <li><a href="#">suit sets</a></li>
+                <li><a href="#">kurta sets</a></li>
+                <li><a href="#">dresses</a></li>
+              
+                <li><a href="#">sarees</a></li>
+                <li><a href="#">lehenga</a></li>
+                <li>
+                  <a href="#">SAHIBA<span>New</span> </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>useful links</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">contact us</a></li>
+                <li><a href="#">returns</a></li>
+                <li><a href="#">track order</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4>experience Mytaylorunit by Sahiba app on mobile</h4>
+              <a href=""
+                ><img
+                  src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png"
+                  alt=""
+              /></a>
+              <a href=""
+                ><img
+                  src="https://constant.myntassets.com/web/assets/img/bc5e11ad-0250-420a-ac71-115a57ca35d51539674178941-apple_store.png"
+                  alt=""
+              /></a>
+              <h4>keep in touch</h4>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="footer-promise">
+                <img
+                  src="https://constant.myntassets.com/web/assets/img/6c3306ca-1efa-4a27-8769-3b69d16948741574602902452-original.png"
+                  alt=""
+                />
+                <div>
+                  <strong>100% ORIGINAL</strong>
+
+                  <span>guarantee for all products at mytaylor unit by sahiba.com</span>
+                </div>
+              </div>
+
+              <div class="footer-promise">
+                <img
+                  src="https://constant.myntassets.com/web/assets/img/ef05d6ec-950a-4d01-bbfa-e8e5af80ffe31574602902427-30days.png"
+                  alt=""
+                />
+                <div>
+                  <strong>Return within 30days</strong>
+                  <span>of receiving your order</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
+<script src="../js/home.js"></script>
+<script>
+  let timerID;
+var slideIndex = 0;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+
+    timerID = setTimeout(() => {
+        showSlides()
+        timerID = null;
+    }
+        , 3000); // Change image every 3 seconds
+}
+
+
+function dropDown1() {
+    let content = document.querySelector(".dropdown-content1");
+
+    content.addEventListener("mouseover", function () {
+        let menu = document.querySelector(".dropdown-menu1");
+        menu.style.display = "block";
+    });
+
+    let menu = document.querySelector(".dropdown-menu1");
+    menu.addEventListener("mouseover", function () {
+        menu.style.display = "block";
+        menu.addEventListener("mouseout", function () {
+            menu.style.display = "none";
+        });
+    });
+
+    content.addEventListener("mouseout", function () {
+        let menu = document.querySelector(".dropdown-menu1");
+        menu.style.display = "none";
+    });
+}
+dropDown1();
+
+function dropDown2() {
+    let content = document.querySelector(".dropdown-content2");
+
+    content.addEventListener("mouseover", function () {
+        let menu = document.querySelector(".dropdown-menu2");
+        menu.style.display = "block";
+    });
+
+    let menu = document.querySelector(".dropdown-menu2");
+    menu.addEventListener("mouseover", function () {
+        menu.style.display = "block";
+        menu.addEventListener("mouseout", function () {
+            menu.style.display = "none";
+        });
+    });
+
+    content.addEventListener("mouseout", function () {
+        let menu = document.querySelector(".dropdown-menu2");
+        menu.style.display = "none";
+    });
+}
+dropDown2();
+
+function dropDown3() {
+    let content = document.querySelector(".dropdown-content3");
+
+    content.addEventListener("mouseover", function () {
+        let menu = document.querySelector(".dropdown-menu3");
+        menu.style.display = "block";
+    });
+
+    let menu = document.querySelector(".dropdown-menu3");
+    menu.addEventListener("mouseover", function () {
+        menu.style.display = "block";
+        menu.addEventListener("mouseout", function () {
+            menu.style.display = "none";
+        });
+    });
+
+    content.addEventListener("mouseout", function () {
+        let menu = document.querySelector(".dropdown-menu3");
+        menu.style.display = "none";
+    });
+}
+dropDown3();
+
+function dropDown4() {
+    let content = document.querySelector(".dropdown-content4");
+
+    content.addEventListener("mouseover", function () {
+        let menu = document.querySelector(".dropdown-menu4");
+        menu.style.display = "block";
+    });
+
+    let menu = document.querySelector(".dropdown-menu4");
+    menu.addEventListener("mouseover", function () {
+        menu.style.display = "block";
+        menu.addEventListener("mouseout", function () {
+            menu.style.display = "none";
+        });
+    });
+
+    content.addEventListener("mouseout", function () {
+        let menu = document.querySelector(".dropdown-menu4");
+        menu.style.display = "none";
+    });
+}
+dropDown4();
+
+function dropDown5() {
+    let content = document.querySelector(".dropdown-content5");
+
+    content.addEventListener("mouseover", function () {
+        let menu = document.querySelector(".dropdown-menu5");
+        menu.style.display = "block";
+    });
+
+    let menu = document.querySelector(".dropdown-menu5");
+    menu.addEventListener("mouseover", function () {
+        menu.style.display = "block";
+        menu.addEventListener("mouseout", function () {
+            menu.style.display = "none";
+        });
+    });
+
+    content.addEventListener("mouseout", function () {
+        let menu = document.querySelector(".dropdown-menu5");
+        menu.style.display = "none";
+    });
+}
+dropDown5();
+
+</script>

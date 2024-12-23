@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MYTAYLORUNIT NY SAHIBA</title>
+    <link rel="stylesheet" href="../css/login.css" />
+    <style>
+        * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Verdana, sans-serif;
+  /* background-color: rgb(248, 248, 248); */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: rgba(254, 238, 241, 255);
+}
+.header {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  background-color: white;
+  /* border: 1px solid red; */
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  /* -webkit-box-shadow: 0 8px 6px -6px #eee;
+              -moz-box-shadow: 0 8px 6px -6px #eee; */
+  box-shadow: 0 8px 6px -6px #eee;
+
+  /* box-shadow: 0px 8px 8px -6px rgba(0, 0, 0, 0.5); */
+}
+.header div ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+.categories {
+  margin-left: 50px;
+  /* display: block; */
+  float: left;
+  width: 37%;
+  /* border: 1px solid red; */
+  /* position: absolute; */
+}
+.header div img {
+  width: 51px;
+  margin-left: 60px;
+}
+.header div ul li a {
+  /* margin-right: 20px; */
+  padding: 28px 17px 28px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  color: #282c3f;
+  /* border-bottom: none; */
+  -webkit-transition: left 0.2s ease-out, width 0.2s ease-out;
+  transition: left 0.2s ease-out, width 0.2s ease-out;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+img {
+  display: block;
+}
+.search-div {
+  display: flex;
+  width: 35%;
+  background-color: #eee;
+  height: 40px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 7%;
+  border-radius: 3px;
+}
+
+#searchpng {
+  /* height: 10px; */
+  /* vertical-align: middle; */
+  width: 15px;
+  /* border: 1px solid red; */
+  margin: 15px;
+  opacity: 0.5;
+}
+.search-div input {
+  width: 70%;
+  border: none;
+  margin-left: 2%;
+  background-color: #eee;
+}
+.nav-last {
+  padding: 0 12px 0 17px;
+  position: relative;
+  display: flex;
+  height: 40px;
+  margin-left: 30px;
+  /* border: 1px solid red; */
+}
+.nav-last > div {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  align-items: center;
+  padding-top: 5px;
+  margin-left: 15px;
+}
+#svg {
+  height: 15px;
+  /* border: 1px solid red; */
+  margin-left: 0px;
+}
+
+.dropdown-menu {
+  /* display: none;
+        position: absolute;
+        top: 200px; */
+  display: none;
+  position: absolute;
+
+  top: 70px;
+  left: 150px;
+  z-index: 20;
+}
+
+.dropdown-menu ul li a {
+  /* margin-right: 20px; */
+  padding: 28px 17px 28px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  color: #282c3f;
+  /* border-bottom: none; */
+  -webkit-transition: left 0.2s ease-out, width 0.2s ease-out;
+  transition: left 0.2s ease-out, width 0.2s ease-out;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+}
+
+#loginbox {
+  width: 400px;
+  height: 500px;
+  margin: auto;
+  margin-top: 150px;
+  background-color: white;
+}
+#loginbox img {
+  display: flex;
+  width: 100%;
+  height: 184px;
+}
+.loginheader {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+.smallheader {
+  font-size: 16px;
+  font-weight: 400;
+  color: #535766;
+}
+/* .signbox {
+                padding: 24px 24px 0;
+            } */
+#parent {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+#login input {
+  margin-bottom: 5%;
+  width: 100%;
+  height: 35px;
+}
+.continue {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 20px auto;
+  color: white;
+  font-weight: 500;
+  background-color: #ff3f6c;
+  cursor: pointer;
+  border: none;
+  align-items: center;
+  padding: 10px;
+  font-size: 15px;
+}
+.loginbody {
+  width: 80%;
+  margin: auto;
+}
+
+#alert {
+  color: red;
+}
+
+p span {
+  color: #ff3f6c;
+  cursor: pointer;
+}
+    </style>
+  </head>
+  <body>
+    <div class="header sticky">
+      <div>
+        <a href="home.html"
+          
+        ></a>
+      </div>
+      <div class="categories">
+        <ul>
+          <li class="dropdown-content">
+            <a href="mens.html">Men</a>
+            <!-- <ul class="dropdown-men">
+                      <li><a href="#">Link 1</a></li>
+                      <li><a href="#">Link 2</a></li>
+                      <li><a href="#">Link 3</a></li>
+                    </ul> -->
+          </li>
+          <li><a href="">Women</a></li>
+          <li><a href="">Kids</a></li>
+          <li><a href="">Home & Living</a></li>
+          <li><a href="">Beauty</a></li>
+        </ul>
+      </div>
+
+      <!-- Search Div -->
+      <div class="search-div">
+        <img
+          id="searchpng"
+          src="https://image.flaticon.com/icons/png/128/49/49116.png"
+          alt=""
+        />
+
+        <input type="text" placeholder="Search for products, brands and more" />
+      </div>
+
+      <div class="nav-last">
+        <div>
+          <a href="./bri.html">
+            <img
+              id="svg"
+              src="https://www.svgrepo.com/show/198180/user-profile.svg"
+              alt=""
+            />
+          </a>
+
+          <div>Profile</div>
+        </div>
+
+        <div>
+          <a href="">
+            <img
+              id="svg"
+              src="https://www.svgrepo.com/show/14970/heart.svg"
+              alt=""
+            />
+          </a>
+
+          <div>Wishlist</div>
+        </div>
+
+        <div>
+          <a href="./bag.html">
+            <img
+              id="svg"
+              src="https://www.svgrepo.com/show/17522/bag.svg"
+              alt=""
+            />
+          </a>
+
+          <div>Bag</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="loginbox">
+      <img
+        src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2021/7/14/1db28809-f3db-48b1-b303-d937716565661626257521634-Banner_Hamburger--2---1-.jpg"
+      />
+      <div class="loginbody">
+        <div class="loginheader">
+          Login <span id="smallheader">Or </span>Signup
+        </div>
+        <form id="login">
+          <input type="text" id="mobileno" placeholder="Mobile Number" /><br />
+          <input type="password" id="password" placeholder="Enter Password" />
+        </form>
+        <p>
+          By continuing I agree to the<span class="smallhead">
+            Terms of Use </span
+          >&<span id="small"> Privacy Policy</span>
+        </p>
+        <p>Don't have account <span onclick="signinpage()">Signup</span></p>
+        <div id="alert"></div>
+        <div class="continue" onclick="checkcredentials()">CONTINUE</div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="../js/login.js"></script>
+<script>
+    function checkcredentials() {
+
+let form = document.getElementById("login");
+let mobileno = form.mobileno.value;
+let password = form.password.value;
+
+
+let arr;
+arr = JSON.parse(localStorage.getItem("details"));
+
+for (var i = 0; i < arr.length; i++) {
+  if (arr[i].mobileno === mobileno && arr[i].password === password) {
+    window.location.href = "bag.html"
+    return;
+  }
+}
+let div = document.createElement("div");
+div.innerHTML = "Invalid Mobile Number or Password"
+let alert = document.getElementById("alert");
+alert.innerHTML = null;
+alert.append(div);
+
+
+
+}
+
+function signinpage() {
+window.location.href = "signin.html";
+}
+</script>

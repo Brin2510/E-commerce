@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ambraee - Products</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    /* Header */
+    header {
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background-color: #f0f0f0;
+      padding: 8px;
+      border-radius: 20px;
+      width: 300px;
+    }
+
+    .search-bar input {
+      border: none;
+      background: transparent;
+      outline: none;
+      padding: 6px;
+      width: 100%;
+    }
+
+    .categories, .cart {
+      display: flex;
+      align-items: center;
+    }
+
+    .categories a, .cart a {
+      margin: 0 15px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .categories a:hover, .cart a:hover {
+      color: #f39c12;
+    }
+
+    /* Main Layout */
+    .main-container {
+      display: flex;
+      margin: 20px;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .filters h4 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .filters input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .filters ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .filters ul li {
+      margin-bottom: 10px;
+    }
+
+    .filters ul li a {
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .filters ul li a:hover {
+      color: #f39c12;
+    }
+
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      flex: 1;
+    }
+
+    /* Product Card */
+    .product-card {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .product-details {
+      margin-top: 10px;
+    }
+
+    .product-title {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .product-price {
+      font-size: 18px;
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    .product-discount {
+      font-size: 14px;
+      color: #16a085;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="search-bar">
+      <input type="text" placeholder="Search">
+    </div>
+    <div class="categories">
+      <a href="#">New Arrivals</a>
+      <a href="#">Sale</a>
+      <a href="#">Ethnic Wear</a>
+      <a href="#">Best Sellers</a>
+      <a href="#">Dresses</a>
+    </div>
+    <div class="cart">
+      <a href="./bag.html">Cart</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="filters">
+        <h4>Discount</h4>
+        <ul>
+          <li><input type="checkbox" id="discount1"> <label for="discount1">60% off</label></li>
+          <li><input type="checkbox" id="discount2"> <label for="discount2">50% off</label></li>
+        </ul>
+        <h4>Size</h4>
+        <ul>
+          <li><input type="checkbox" id="size-xs"> <label for="size-xs">XS</label></li>
+          <li><input type="checkbox" id="size-s"> <label for="size-s">S</label></li>
+          <li><input type="checkbox" id="size-m"> <label for="size-m">M</label></li>
+          <li><input type="checkbox" id="size-l"> <label for="size-l">L</label></li>
+          <li><input type="checkbox" id="size-xl"> <label for="size-xl">XL</label></li>
+          <li><input type="checkbox" id="size-xxl"> <label for="size-xxl">XXL</label></li>
+        </ul>
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#">Co-ord Set</a></li>
+          <li><a href="#">Dresses</a></li>
+          <li><a href="#">Kurtas</a></li>
+          <li><a href="#">Tops & Shirts</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="text-banner-container">
+        
+               <style>
+          .text-banner-container {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 20px; /* Adds padding around the text */
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100px; /* Sets the height of the banner */
+    text-align: center; /* Centers the text */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    margin: 20px 0; /* Adds margin to the top and bottom */
+}
+
+.text-banner-title {
+    font-family: 'Arial', sans-serif; /* Font style */
+    font-size: 24px; /* Font size */
+    color: #333; /* Text color */
+    font-weight: bold; /* Makes the text bold */
+    letter-spacing: 2px; /* Adds space between letters */
+    text-transform: uppercase; /* Makes the text uppercase */
+    margin: 0; /* Removes default margin */
+}
+
+        </style>
+      
+      </div>
+
+      <style>
+        /* General Styles */
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 20px;
+          background-color: #f9f9f9;
+        }
+    
+        /* Product Grid */
+        .product-grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          justify-content: center;
+        }
+    
+        /* Product Card */
+        .product-card {
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          overflow: hidden;
+          width: 250px;
+          text-align: center;
+          position: relative;
+          background-color: #fff;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        .product-image {
+          position: relative;
+          overflow: hidden;
+        }
+    
+        .product-image img {
+          width: 100%;
+          height: auto;
+          transition: opacity 0.5s ease;
+        }
+    
+        .image-hover {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+        }
+    
+        .product-image:hover .image-hover {
+          opacity: 1;
+        }
+    
+        .product-image:hover .image-front {
+          opacity: 0;
+        }
+    
+        .like-button {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          border: none;
+          background-color: rgba(0, 0, 0, 0.5);
+          color: #fff;
+          font-size: 14px;
+          padding: 5px 10px;
+          border-radius: 4px;
+          cursor: pointer;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+    
+        .product-image:hover .like-button {
+          opacity: 1;
+        }
+    
+        /* Quick View Button */
+        .quick-view {
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          border: none;
+          background-color: rgba(0, 0, 0, 0.5);
+          color: #fff;
+          font-size: 14px;
+          padding: 5px 10px;
+          border-radius: 4px;
+          cursor: pointer;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+    
+        .product-image:hover .quick-view {
+          opacity: 1;
+        }
+    
+        /* Product Details */
+        .product-details {
+          padding: 10px;
+        }
+    
+        .product-title {
+          font-size: 16px;
+          font-weight: bold;
+          margin: 10px 0 5px;
+        }
+    
+        .product-price {
+          font-size: 14px;
+          color: #555;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="product-grid">
+        <!-- Product Card -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://assets.panashindia.com/media/catalog/product/cache/4/small_image/306x427/9df78eab33525d08d6e5fb8d27136e95/4/5/4590sl03-1013.jpg" alt="Stripe Royal Blue Suit Set" class="image-front">
+            <img src="https://assets.panashindia.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/4/5/4590sl03-1013-1.jpg" alt="Stripe Royal Blue Suit Set Hover" class="image-hover">
+            
+            <button class="quick-view">Quick View</button>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Stripe Royal Blue Suit Set</h3>
+            <p class="product-price">₹ 5,749.00</p>
+          </div>
+        </div>
+    
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://naachiyars.in/cdn/shop/files/N1896109-B_800x.jpg?v=1716381646" alt="Peachy Bloom Cotton Suit" class="image-front">
+            <img src="https://naachiyars.in/cdn/shop/files/N1896109-C_1000x.jpg?v=1716381647" alt="Peachy Bloom Cotton Suit Hover" class="image-hover">
+           
+            <button class="quick-view">Quick View</button>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Peachy Bloom Cotton Suit</h3>
+            <p class="product-price">₹ 6,249.00</p>
+          </div>
+        </div>
+    
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://suruchiparakh.com/cdn/shop/files/05-01-20246830.jpg?v=1707930645&width=823" alt="Mauve Mirage Co-Ord Set" class="image-front">
+            <img src="https://suruchiparakh.com/cdn/shop/files/05-01-20246872.jpg?v=1709455902&width=823" alt="Mauve Mirage Co-Ord Set Hover" class="image-hover">
+            
+            <button class="quick-view">Quick View</button>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Mauve Mirage Co-Ord Set</h3>
+            <p class="product-price">₹ 4,999.00</p>
+          </div>
+        </div>
+    
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://cygnusfashion.com/cdn/shop/products/4803-A.jpg?v=1621667256" alt="Multicolor Floral Chinoiserie" class="image-front">
+            <img src="https://cygnusfashion.com/cdn/shop/products/4803-D.jpg?v=1621667256" alt="Multicolor Floral Chinoiserie Hover" class="image-hover">
+            
+            <button class="quick-view">Quick View</button>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Multicolor Floral Chinoiserie</h3>
+            <p class="product-price">₹8,249.00</p>
+          </div>
+        </div>
+       
+          </div>
+      
+    </div>
+  </div>
+</body>
+</html>
